@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthenticationComponent } from './authentication/authentication.component';
-import { PageComponentsComponent } from './page-components/page-components.component';
+import { HeaderComponent } from './page-components/header/header.component';
+import { FooterComponent } from './page-components/footer/footer.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { SignUpComponent } from './authentication/sign-up/sign-up.component';
 // page componetns
-import { headerComponentsComponent } from './page-components/header/header-components.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        AuthenticationComponent,
-        PageComponentsComponent,
-        headerComponentsComponent
+        HeaderComponent,
+        FooterComponent,
+        LoginComponent,
+        SignUpComponent
     ],
     imports: [
         BrowserModule,
