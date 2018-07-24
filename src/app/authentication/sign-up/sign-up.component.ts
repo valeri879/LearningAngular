@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../user.service'
+import { Users } from '../../users';
 
 @Component({
     selector: 'app-sign-up',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-    constructor() { }
+    constructor(private userService: UserService) { }
+
+    showPassword: boolean = false;
+    showConfirmationPassword: boolean = false;
+
+    password: string;
+    confirmPassword: string;
+
+    checkPasswords(userData): void {
+
+        console.log();
+
+        /* if(this.checkPasswords) {
+            console.log('valid');
+        } */
+    }
 
     ngOnInit() {
     }
