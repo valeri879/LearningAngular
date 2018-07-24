@@ -19,9 +19,8 @@
                         <label class="custom-control-label" for="show-password">show password</label>
                     </div>
                 </div>
-                <input id="password" [class.is-valid]="newPassword == confirmPassword" [class.is-invalid]="newPassword != confirmPassword" [(ngModel)]="newPassword" [type]="!showPassword? 'password':'text'" class="form-control">
+                <input id="password" [class.is-valid]="(newPassword == confirmPassword) && newPassword?.length" [class.is-invalid]="newPassword != confirmPassword" [(ngModel)]="newPassword" [type]="!showPassword? 'password':'text'" class="form-control">
                 <div class="invalid-feedback">Please confirm password</div>
-                {{newPassword?.length}}
             </div>
             <div class="form-group">
                 <div class="d-flex align-items-center justify-content-between">
@@ -31,7 +30,7 @@
                         <label class="custom-control-label" for="show-confirmed-password">show password</label>
                     </div>
                 </div>
-                <input id="confirm-password" [class.is-valid]="newPassword == confirmPassword" [class.is-invalid]="newPassword != confirmPassword" [(ngModel)]="confirmPassword" [type]="!showConfirmationPassword? 'password':'text'" class="form-control">
+                <input id="confirm-password" [class.is-valid]="(newPassword == confirmPassword) && confirmPassword?.length" [class.is-invalid]="newPassword != confirmPassword" [(ngModel)]="confirmPassword" [type]="!showConfirmationPassword? 'password':'text'" class="form-control">
                 <div class="invalid-feedback">Confirmation password don't match</div>
             </div>
             <div class="form-group">
