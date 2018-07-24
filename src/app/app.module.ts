@@ -7,6 +7,7 @@ import { HeaderComponent } from './page-components/header/header.component';
 import { FooterComponent } from './page-components/footer/footer.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
+import { AppRoutingModule } from './/app-routing.module';
 // page componetns
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SignUpComponent } from './authentication/sign-up/sign-up.component';
     imports: [
         BrowserModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        AppRoutingModule,
     ],
     providers: [
         // no need to place any providers due to the `providedIn` flag...
