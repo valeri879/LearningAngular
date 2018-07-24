@@ -14,7 +14,11 @@ export class LoginComponent implements OnInit {
 	currUser: string;
 	pass: Users[];
 	inputPassword: Users;
-	focused = false;
+	focused: boolean = false;
+	focusedPassword: boolean = false;
+	focusedUserName: boolean = false;
+	showPassword: boolean = false;
+
 
 	constructor(private userService: UserService) { }
 
