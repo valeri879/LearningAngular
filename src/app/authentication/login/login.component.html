@@ -1,17 +1,33 @@
 <div class="container p-5">
-    <form action="">
-        <h3>Authentication</h3>
-        <div class="form-group">
-            <label for="email">Your mail</label>
-            <input type="text" class="form-control">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <h3>Authentication</h3>
+            <div class="form-group">
+                <label for="email">User name:</label>
+                <input [class.is-invalid]="(Users[0].userName != userName) && focused"
+                    (focus)="focused=true"
+                    (blur)="focused=false"
+                    [(ngModel)]="userName"
+                    type="text"
+                    class="form-control">
+                <div class="invalid-feedback">Please provide a valid user name.</div>
+                {{Users[0].userName}}
+            </div>
+            <div class="form-group">
+                <label for="">Password:</label>
+                <input [class.is-invalid]="(Users[0].password != userPassword) && focused"
+                    (focus)="focused=true"
+                    (blur)="focused=false"
+                    [(ngModel)]='userPassword'
+                    type="password"
+                    class="form-control">
+                <div class="invalid-feedback">Please provide a valid password.</div>
+                <!-- {{Users[0].password}}
+                {{userPassword}} -->
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" (click)="onSelect(userPassword)">Login</button>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="">password</label>
-            <input type="password" class="form-control is-invalid">
-            <div class="invalid-feedback">Please provide a valid password.</div>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-success" type="submit">Login</button>
-        </div>
-    </form>
+    </div>
 </div>
