@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
 	Users = USERS;
 	currUser: string;
 	pass: Users[];
+
+	cu: string;
+
 	inputPassword: Users;
 	focused: boolean = false;
 	focusedPassword: boolean = false;
@@ -23,8 +26,10 @@ export class LoginComponent implements OnInit {
 	constructor(private userService: UserService) { }
 
 	ngOnInit() {
-		// this.userService.getUsers().subscribe(pass => this.Users = pass);
-		// console.log(this.Users);
+		this.userService.getUsers().subscribe(pass => this.Users = pass);
+		console.log(this.Users);
+
+		console.log(this.cu);
 	}
 	onSelect(user: Users) {
 		this.userService.getUsers().subscribe(pass => this.Users = pass);

@@ -11,6 +11,7 @@
                 <div class="invalid-feedback">Please provide a valid user name.</div>
             </div>
             <div class="form-group">
+                <!-- password -->
                 <div class="d-flex align-items-center justify-content-between">
                     <label for="">Password:</label>
                     <div class="custom-control custom-checkbox">
@@ -23,8 +24,9 @@
                     (focus)="focusedPassword=true" (blur)="focusedPassword=false" [(ngModel)]='currUser' type="password" class="form-control">
                 <div class="invalid-feedback">Please provide a valid password.</div>
             </div>
+
             <div class="form-group">
-                <button class="btn btn-success" (click)="onSelect(userPassword)">Login</button>
+                <button class="btn btn-success" [disabled]="!userName?.length || !currUser?.length" (click)="onSelect(userPassword)">Login</button>
             </div>
         </div>
     </div>

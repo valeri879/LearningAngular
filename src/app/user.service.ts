@@ -6,11 +6,11 @@ import { Users } from './users';
 import { USERS } from './users-mock';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class UserService {
-  constructor() { }
-  getUsers(): Observable<Users[]> {
-    return of(USERS);
-  }
+    constructor() { }
+    getUsers(): Observable<Users[]> {
+        return of(USERS);
+    }
 }
