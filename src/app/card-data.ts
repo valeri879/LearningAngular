@@ -4,6 +4,6 @@ export class CardDataType {
     last_name: string;
     email: string;
     gender: string;
-    ip_address: string;
+    date: string;
     parpagraph: string;
 }
