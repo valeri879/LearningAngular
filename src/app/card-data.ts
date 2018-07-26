@@ -5,5 +5,5 @@ export class CardDataType {
     email: string;
     gender: string;
     date: string;
-    parpagraph: string;
+    about: string;
 }

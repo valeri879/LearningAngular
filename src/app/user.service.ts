@@ -16,7 +16,7 @@ export class UserService {
         private http: HttpClient
     ) { }
 
-    private noteUrl = 'https://my.api.mockaroo.com/carddata.json?key=5ebe6c00';
+    private noteUrl = 'https://my.api.mockaroo.com/users.json?key=5ebe6c00';
 
     getCardData(): Observable<CardDataType[]> {
         return this.http.get<CardDataType[]>(this.noteUrl)
