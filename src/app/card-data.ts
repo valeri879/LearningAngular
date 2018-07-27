@@ -10,4 +10,5 @@ export class CardDataType {
 export class ListData {
     id: number;
     list: string;
+    fixed: boolean;
 }

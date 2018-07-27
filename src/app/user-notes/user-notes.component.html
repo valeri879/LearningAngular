@@ -1,9 +1,13 @@
 <div class="container py-5">
-    <div class="d-flex align-items-center" *ngFor="let list of listData; let i = index">
-        <input [(ngModel)]="fixed" id="{{i}}" type="checkbox" class="custom-checkbox">
-        {{fixed}}
-        <label [class.font-weight-bold]="fixed == true" class="m-0" for="{{i}}">{{list.lists}} {{i}}</label>
+    <div class="row mb-5">
+        <div  *ngFor="let list of listData; let i = index" class="col-md-3">
+            <div class="d-flex align-items-center custom-control custom-checkbox">
+                <input [(ngModel)]="list.fixed" id="{{i}}" type="checkbox" class="custom-control-input">
+                <label class="custom-control-label m-0" [style.text-decoration]="list.fixed == true ? 'line-through':'inherit'" for="{{i}}">{{list.lists}}</label>
+            </div>
+        </div>
     </div>
+
     <div class="row">
         <div *ngFor="let user of userData; let i = index;" class="col-md-4">
             <div class="card mb-3" style="max-width: 18rem;">

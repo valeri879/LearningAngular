@@ -5,5 +5,5 @@ export const DATATYPES: CardDataType[] = [
 ]
 
 export const LISTDATA: ListData[] = [
-    { id: 1, list: 'Microsoftß' }
+    { id: 1, list: 'Microsoftß', fixed: false }
 ]
