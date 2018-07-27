@@ -1,27 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { CardDataType } from '../card-data';
+import { CardDataType, ListData } from '../card-data';
 import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-user-notes',
-  templateUrl: './user-notes.component.html',
-  styleUrls: ['./user-notes.component.css']
+    selector: 'app-user-notes',
+    templateUrl: './user-notes.component.html',
+    styleUrls: ['./user-notes.component.css']
 })
 export class UserNotesComponent implements OnInit {
 
-  userData: CardDataType[];
+    userData: CardDataType[];
+    listData: ListData[];
+    fixed: boolean = false;
 
-  constructor(
-    private userService: UserService
-  ) { }
+    constructor(
+        private userService: UserService
+    ) { }
 
-  ngOnInit() {
-    console.log(this.getData());
-  }
 
-  getData(): void {
-    this.userService.getCardData()
-    .subscribe(userData => this.userData = userData);
-  }
+    ngOnInit() {
+        console.log(this.getData());
+    }
+
+    getData(): void {
+        this.userService.getCardData().subscribe(userData => this.userData = userData);
+        this.userService.getListData().subscribe(listData => this.listData = listData);
+    }
 
 }

@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Users } from './users';
 import { USERS } from './users-mock';
-import { CardDataType } from './card-data';
+import { CardDataType, ListData } from './card-data';
 
 @Injectable({
     providedIn: 'root'
@@ -16,10 +16,15 @@ export class UserService {
         private http: HttpClient
     ) { }
 
-    private noteUrl = 'https://my.api.mockaroo.com/users.json?key=5ebe6c00';
+    private noteUrl = 'api/Users.json';
+    private listUrl = 'api/List.json';
 
     getCardData(): Observable<CardDataType[]> {
         return this.http.get<CardDataType[]>(this.noteUrl)
+    }
+
+    getListData(): Observable<ListData[]> {
+        return this.http.get<ListData[]>(this.listUrl)
     }
 
     getUsers(): Observable<Users[]> {

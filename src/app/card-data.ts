@@ -7,3 +7,7 @@ export class CardDataType {
     date: string;
     about: string;
 }
+export class ListData {
+    id: number;
+    list: string;
+}
