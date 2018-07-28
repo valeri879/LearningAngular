@@ -9,6 +9,8 @@ import { LoginComponent } from './authentication/login/login.component';
 import { SignUpComponent } from './authentication/sign-up/sign-up.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { UserNotesComponent } from './user-notes/user-notes.component';
+// modules
+import {NgxPaginationModule} from 'ngx-pagination';
 // page componetns
 
 @NgModule({
@@ -24,7 +26,8 @@ import { UserNotesComponent } from './user-notes/user-notes.component';
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NgxPaginationModule
     ],
     providers: [
         // no need to place any providers due to the `providedIn` flag...
