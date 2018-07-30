@@ -7,8 +7,9 @@ export class CardDataType {
     date: string;
     about: string;
 }
+
 export class ListData {
-    id: number;
-    list: string;
-    fixed: boolean;
+    id: number = -1;
+    lists: string = '';
+    fixed: boolean = false;
 }

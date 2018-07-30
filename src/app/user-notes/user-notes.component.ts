@@ -5,8 +5,7 @@ import { UserService } from '../user.service';
 @Component({
     selector: 'app-user-notes',
     templateUrl: './user-notes.component.html',
-    styleUrls: ['./user-notes.component.css'],
-    changeDetection:ChangeDetectionStrategy.OnPush
+    styleUrls: ['./user-notes.component.css']
 })
 export class UserNotesComponent implements OnInit {
 
