@@ -10,12 +10,13 @@ import { UserService } from '../user.service';
 })
 export class UserNotesComponent implements OnInit {
 
-    page: number = 3;
+    @Input() id: string;
+
+    page: number = 1;
 
     userData: CardDataType[];
     listData: ListData[];
     fixed: boolean = false;
-    p: number = 1;
 
     constructor(
         private userService: UserService
